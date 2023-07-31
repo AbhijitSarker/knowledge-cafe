@@ -1,0 +1,57 @@
+.news-container h2, p{
+    text-align: start;
+    
+}
+
+.news-container{
+    justify-content: start;
+        /* position: relative ; */
+        width: 900px;
+        background-color: antiquewhite;
+        margin-top: 50px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px;
+    
+}
+
+.profile{
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+}
+
+.profile img{
+    
+    border-radius: 30px;
+    width: 60px;
+    height: 60px;
+}
+
+.profile-info{
+    margin-left: 10px;
+}
+.profile-info h3{
+    margin: 0;
+}
+
+.others{
+    margin-left: 25px;
+    margin-right: 25px;
+    
+}
+
+button{
+    display: block;
+    background-color: #5783db;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 20px;
+    /* justify-content: flex-start; */
+}
