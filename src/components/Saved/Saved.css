@@ -1,3 +1,24 @@
 .saved-container{
-    background-color: antiquewhite;
+    margin-top: 50px;
+    position: sticky;
+    top: 0;
+    
+
+}
+
+.time{
+    border: 2px solid blueviolet;
+    border-radius: 10px;
+    padding: 25px 50px;
+    background-color: #EFEDFD;
+    font-weight: 500;
+    font-size: larger;
+    
+}
+
+.blogs{
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
 }
