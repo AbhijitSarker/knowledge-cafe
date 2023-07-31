@@ -1,0 +1,62 @@
+[
+    {
+        "id": "64c74cc154ab607754d4f4af",
+        "picture": "http://placehold.it/850x450",
+        "name": "Simon Cortez",
+        "about": "Proident est reprehenderit excepteur et deserunt adipisicing eiusmod consequat ad ipsum in.",
+        "registered": "2020-08-23T07:07:22 -06:00",
+        "tags": [
+            "enim",
+            "culpa",
+            "nostrud"
+        ]
+    },
+    {
+        "id": "64c74cc1e9853d9c91449757",
+        "picture": "http://placehold.it/850x450",
+        "name": "Estela Odonnell",
+        "about": "Sunt sint est nulla irure magna proident voluptate esse eu aute incididunt minim.",
+        "registered": "2023-03-12T07:26:14 -06:00",
+        "tags": [
+            "cillum",
+            "fugiat",
+            "laborum"
+        ]
+    },
+    {
+        "id": "64c74cc128369ee0798107c8",
+        "picture": "http://placehold.it/850x450",
+        "name": "Cathleen Buckley",
+        "about": "Aliquip aliquip ipsum aliqua ea magna aliquip deserunt amet elit eiusmod non.",
+        "registered": "2019-06-06T03:37:00 -06:00",
+        "tags": [
+            "enim",
+            "velit",
+            "dolore"
+        ]
+    },
+    {
+        "id": "64c74cc122a2d08ed5f20008",
+        "picture": "http://placehold.it/850x450",
+        "name": "Hester Craig",
+        "about": "Tempor minim aute cupidatat officia sint magna qui nulla.",
+        "registered": "2018-08-26T02:05:37 -06:00",
+        "tags": [
+            "sint",
+            "consectetur",
+            "reprehenderit"
+        ]
+    },
+    {
+        "id": "64c74cc1cb0d824c4355e104",
+        "picture": "http://placehold.it/850x450",
+        "name": "Mallory Wall",
+        "about": "Aliquip quis proident in Lorem eu magna ullamco reprehenderit laborum sit velit exercitation cillum consectetur.",
+        "registered": "2020-11-27T08:04:38 -06:00",
+        "tags": [
+            "ullamco",
+            "ullamco",
+            "sit"
+        ]
+    }
+]
