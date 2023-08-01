@@ -11,8 +11,13 @@
         margin-top: 50px;
         padding-top: 25px;
         padding-bottom: 25px;
+        border-radius: 10px;
+        box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
 }
 
+.news-container img{
+    border-radius: 10px;
+}
 .info{
     display: flex;
     justify-content: space-between;
@@ -39,6 +44,13 @@
 }
 .profile-info h3{
     margin: 0;
+}
+
+.tags{
+    display: flex;
+}
+.tags p{
+    margin-right: 10px;
 }
 
 .others{

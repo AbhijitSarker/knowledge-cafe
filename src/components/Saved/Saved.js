@@ -1,9 +1,9 @@
 import React from 'react';
 import './Saved.css';
 import Blog from '../Blog/Blog';
-const Saved = ({ saved }) => {
+const Saved = ({ time }) => {
     let spentTime = 0;
-    for (const news of saved) {
+    for (const news of time) {
         spentTime = spentTime + news.time;
     }
     return (

@@ -4,7 +4,7 @@ import News from '../News/News';
 import Saved from '../Saved/Saved';
 const Main = () => {
     const [newses, setNewses] = useState([]);
-    const [saved, setSaved] = useState([]);
+    const [time, setTime] = useState([]);
 
     useEffect(() => {
         fetch("api.json")
@@ -12,9 +12,9 @@ const Main = () => {
             .then(data => setNewses(data));
     }, []);
 
-    const handleSaved = (news) => {
-        const newSaved = [...saved, news];
-        setSaved(newSaved);
+    const handleTime = (news) => {
+        const newTime = [...time, news];
+        setTime(newTime);
 
     }
     return (
@@ -25,7 +25,7 @@ const Main = () => {
                     newses.map(news => <News
                         key={news.id}
                         news={news}
-                        handleSaved={handleSaved}
+                        handleTime={handleTime}
                     ></News>)
                 }
 
@@ -33,7 +33,7 @@ const Main = () => {
 
             <div>
                 <Saved
-                    saved={saved}
+                    time={time}
                 ></Saved>
             </div>
         </div>

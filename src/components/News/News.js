@@ -1,6 +1,6 @@
 import React from 'react';
 import './News.css';
-const News = ({ news, handleSaved }) => {
+const News = ({ news, handleTime }) => {
     // console.log(news);
     const { name, picture, about, registered, tags, time } = news;
 
@@ -23,12 +23,12 @@ const News = ({ news, handleSaved }) => {
             </div>
             <div className='others'>
                 <h2>{about}</h2>
-                <div>
+                <div className='tags'>
                     <p>#{tags[0]}</p>
                     <p>#{tags[1]}</p>
                     <p>#{tags[2]}</p>
                 </div>
-                <button onClick={() => handleSaved(news)}>Mark As Saved</button>
+                <button onClick={() => handleTime(news)}>Mark As Read</button>
             </div>
         </div>
     );
