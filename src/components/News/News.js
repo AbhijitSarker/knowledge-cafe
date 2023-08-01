@@ -1,5 +1,8 @@
 import React from 'react';
 import './News.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
+
 const News = ({ news, handleTime }) => {
     // console.log(news);
     const { name, picture, about, registered, tags, time } = news;
@@ -18,7 +21,8 @@ const News = ({ news, handleTime }) => {
                     </div>
                 </div>
                 <div>
-                    <small>{time} min read</small>
+                    <small>{time} min read</small> <br /><br />
+                    <FontAwesomeIcon className='icon' icon={faBookmark} />
                 </div>
             </div>
             <div className='others'>

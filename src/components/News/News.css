@@ -7,7 +7,7 @@
     justify-content: start;
         /* position: relative ; */
         width: 900px;
-        background-color: #f3f3f3;
+        background-color: #EFEDFD;
         margin-top: 50px;
         padding-top: 25px;
         padding-bottom: 25px;
@@ -41,6 +41,7 @@
 
 .profile-info{
     margin-left: 10px;
+    text-align: start;
 }
 .profile-info h3{
     margin: 0;
@@ -53,6 +54,14 @@
     margin-right: 10px;
 }
 
+.icon{
+    font-size: 30px;
+}
+.icon:hover{
+    color: #8A2BE2;
+    
+}
+
 .others{
     margin-left: 25px;
     margin-right: 25px;
@@ -61,7 +70,7 @@
 
 button{
     display: block;
-    background-color: #5783db;
+    background-color: #a780cc;
     border: 0;
     border-radius: 8px;
     padding: 10px 20px;

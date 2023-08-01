@@ -12,11 +12,22 @@ const Main = () => {
             .then(data => setNewses(data));
     }, []);
 
-    const handleTime = (news) => {
-        const newTime = [...time, news];
+    const handleTime = (selectedTime) => {
+        let newTime = [];
+        const exists = time.find(time => time.id === selectedTime.id);
+
+        if (!exists) {
+            newTime = [...time, selectedTime];
+        } else {
+            const rest = time.filter(time => time.id !== selectedTime.id);
+            newTime = [...rest, selectedTime]
+        }
+
         setTime(newTime);
 
     }
+
+    // const handleSave = 
     return (
 
         <div className='main-container'>
