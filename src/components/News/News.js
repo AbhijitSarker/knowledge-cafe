@@ -1,29 +1,34 @@
 import React from 'react';
 import './News.css';
-const News = () => {
+const News = ({ news, handleSaved }) => {
+    // console.log(news);
+    const { name, picture, about, registered, tags, time } = news;
+
     return (
         <div className='news-container'>
-            <img src="http://via.placeholder.com/850x450" alt="" />
+            <img src={picture} alt="" />
             <div className='info'>
                 <div className='profile'>
                     <div>
                         <img src="http://via.placeholder.com/60x60" alt="" />
                     </div>
                     <div className='profile-info'>
-                        <h3>mr Rahu</h3>
-                        <small>mar 12 </small>
+                        <h3>{name}</h3>
+                        <small>{registered}</small>
                     </div>
                 </div>
                 <div>
-                    <small>5 min read</small>
+                    <small>{time} min read</small>
                 </div>
             </div>
             <div className='others'>
-                <h2>hello</h2>
+                <h2>{about}</h2>
                 <div>
-                    <p>#beginners</p>
+                    <p>#{tags[0]}</p>
+                    <p>#{tags[1]}</p>
+                    <p>#{tags[2]}</p>
                 </div>
-                <button>Mark As Saved</button>
+                <button onClick={() => handleSaved(news)}>Mark As Saved</button>
             </div>
         </div>
     );
