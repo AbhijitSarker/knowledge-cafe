@@ -5,6 +5,7 @@ import Saved from '../Saved/Saved';
 const Main = () => {
     const [newses, setNewses] = useState([]);
     const [time, setTime] = useState([]);
+    const [bookmark, setBookmark] = useState([]);
 
     useEffect(() => {
         fetch("api.json")
@@ -27,7 +28,20 @@ const Main = () => {
 
     }
 
-    // const handleSave = 
+    const handleBookmark = (selectedNews) => {
+        let newBookmark = [];
+        const exists = bookmark.find(bookmark => bookmark.id === selectedNews.id);
+
+        if (!exists) {
+            newBookmark = [...bookmark, selectedNews];
+        } else {
+            const rest = bookmark.filter(bookmark => bookmark.id !== selectedNews.id);
+            newBookmark = [...rest, selectedNews]
+        }
+
+        setBookmark(newBookmark);
+    }
+
     return (
 
         <div className='main-container'>
@@ -37,6 +51,7 @@ const Main = () => {
                         key={news.id}
                         news={news}
                         handleTime={handleTime}
+                        handleBookmark={handleBookmark}
                     ></News>)
                 }
 
@@ -45,6 +60,7 @@ const Main = () => {
             <div>
                 <Saved
                     time={time}
+                    bookmark={bookmark}
                 ></Saved>
             </div>
         </div>

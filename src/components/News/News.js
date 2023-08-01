@@ -3,8 +3,7 @@ import './News.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 
-const News = ({ news, handleTime }) => {
-    // console.log(news);
+const News = ({ news, handleTime, handleBookmark }) => {
     const { name, picture, about, registered, tags, time } = news;
 
     return (
@@ -22,7 +21,7 @@ const News = ({ news, handleTime }) => {
                 </div>
                 <div>
                     <small>{time} min read</small> <br /><br />
-                    <FontAwesomeIcon className='icon' icon={faBookmark} />
+                    <FontAwesomeIcon onClick={() => handleBookmark(news)} className='icon' icon={faBookmark} />
                 </div>
             </div>
             <div className='others'>
