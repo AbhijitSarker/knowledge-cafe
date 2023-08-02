@@ -1,7 +1,7 @@
 import React from 'react';
 import './News.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark, faBookBookmark } from '@fortawesome/free-solid-svg-icons';
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
 const News = ({ news, handleTime, handleBookmark }) => {
     const { name, picture, about, registered, tags, time } = news;

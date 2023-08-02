@@ -7,17 +7,14 @@ const Saved = ({ time, bookmark }) => {
     for (const news of time) {
         spentTime = spentTime + news.time;
     }
-    // console.log(time);
-    // console.log(bookmark);
+
     let bookmarks = [];
-    // bookmark.find(bookmark => [...bookmarks, bookmark])
+
     for (const news of bookmark) {
         bookmarks = [...bookmarks, news.about];
     }
 
-    // console.log(bookmark);
-    // console.log(time);
-    // console.log(spentTime);
+
 
 
     return (

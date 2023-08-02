@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './Main.css';
 import News from '../News/News';
 import Saved from '../Saved/Saved';
+import { addBookmark, getStoredBookmarks } from '../../utilities/database';
 const Main = () => {
     const [newses, setNewses] = useState([]);
     const [time, setTime] = useState([]);
@@ -12,6 +13,22 @@ const Main = () => {
             .then(response => response.json())
             .then(data => setNewses(data));
     }, []);
+
+    useEffect(() => {
+        const storedBookmarks = getStoredBookmarks();
+        const savedBookmarks = [];
+
+        for (const id in storedBookmarks) {
+
+            const addedBookmark = newses.find(news => news.id === id);
+
+            if (addedBookmark) {
+                savedBookmarks.push(addedBookmark);
+            }
+
+        }
+        setBookmark(savedBookmarks);
+    }, [newses])
 
     const handleTime = (selectedTime) => {
         let newTime = [];
@@ -25,7 +42,6 @@ const Main = () => {
         }
 
         setTime(newTime);
-
     }
 
     const handleBookmark = (selectedNews) => {
@@ -40,6 +56,7 @@ const Main = () => {
         }
 
         setBookmark(newBookmark);
+        addBookmark(selectedNews.id);
     }
 
     return (
