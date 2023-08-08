@@ -3,6 +3,8 @@ import './Main.css';
 import News from '../News/News';
 import Saved from '../Saved/Saved';
 import { addBookmark, getStoredBookmarks } from '../../utilities/database';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Main = () => {
     const [newses, setNewses] = useState([]);
     const [time, setTime] = useState([]);
@@ -50,9 +52,11 @@ const Main = () => {
 
         if (!exists) {
             newBookmark = [...bookmark, selectedNews];
+            toast("Bookmarked!");
         } else {
             const rest = bookmark.filter(bookmark => bookmark.id !== selectedNews.id);
             newBookmark = [...rest, selectedNews]
+            toast("Already in Bookmark!");
         }
 
         setBookmark(newBookmark);

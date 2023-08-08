@@ -2,6 +2,8 @@ import React from 'react';
 import './News.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const News = ({ news, handleTime, handleBookmark }) => {
     const { name, picture, about, registered, tags, time } = news;
@@ -22,6 +24,7 @@ const News = ({ news, handleTime, handleBookmark }) => {
                 <div>
                     <small>{time} min read</small> <br /><br />
                     <FontAwesomeIcon onClick={() => handleBookmark(news)} className='icon' icon={faBookmark} />
+                    <ToastContainer />
                 </div>
             </div>
             <div className='others'>
